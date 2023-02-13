@@ -1,0 +1,64 @@
+* {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 3vh;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-color: lightgray;
+  color: black;
+}
+
+#toggle-mode {
+  position: absolute;
+  top: 4%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  padding: 7px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  border: none;
+  cursor: pointer;
+}
+
+.dark-mode {
+  background-color: rgb(22, 22, 22);
+  color: white;
+  text-shadow: 1.5px 1.5px black;
+  border: 1px solid black;
+}
+
+.dark-mode .cell{
+  border: 1px solid black;
+}
+
+.dark-mode .cell:hover{
+  background-color: black;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.342);
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 36px;
+  font-weight: bold;
+  border: 1px solid #d9d9d9;
+  user-select: none;
+  text-shadow: 1.5px 1.5px rgb(207, 207, 207);
+}
+
+.cell:hover {
+  background-color: #e6e6e6;
+  cursor: pointer;
+}
