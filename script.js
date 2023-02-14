@@ -2,6 +2,7 @@ const board = document.getElementById("board");
 const cells = board.getElementsByTagName("td");
 const message = document.getElementById("message");
 const toggleModeButton = document.getElementById("toggle-mode");
+z;
 let currentPlayer = "X";
 let gameOver = false;
 
@@ -13,16 +14,16 @@ const winningCombinations = [
   [1, 4, 7],
   [2, 5, 8],
   [0, 4, 8],
-  [2, 4, 6]
+  [2, 4, 6],
 ];
 
 toggleModeButton.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-    board.classList.toggle("dark-mode");
-    toggleModeButton.classList.toggle("dark-mode");
-  });
+  body.classList.toggle("dark-mode");
+  board.classList.toggle("dark-mode");
+  toggleModeButton.classList.toggle("dark-mode");
+});
 
-board.addEventListener("click", event => {
+board.addEventListener("click", (event) => {
   if (gameOver) {
     return;
   }
@@ -42,7 +43,7 @@ board.addEventListener("click", event => {
       }
     }
 
-    if (Array.from(cells).every(cell => cell.textContent)) {
+    if (Array.from(cells).every((cell) => cell.textContent)) {
       message.textContent = "It's a draw!";
       gameOver = true;
       return;
@@ -50,6 +51,4 @@ board.addEventListener("click", event => {
 
     currentPlayer = currentPlayer === "X" ? "O" : "X";
   }
-}
-
-);
+});
