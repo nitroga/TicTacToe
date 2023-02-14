@@ -2,7 +2,6 @@ const board = document.getElementById("board");
 const cells = board.getElementsByTagName("td");
 const message = document.getElementById("message");
 const toggleModeButton = document.getElementById("toggle-mode");
-z;
 let currentPlayer = "X";
 let gameOver = false;
 
