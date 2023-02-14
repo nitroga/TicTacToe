@@ -25,7 +25,7 @@ body {
 }
 
 .dark-mode {
-  background-color: rgb(22, 22, 22);
+  background-color: rgb(40, 40, 40);
   color: white;
   text-shadow: 1.5px 1.5px black;
   border: 1px solid black;
