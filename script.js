@@ -2,6 +2,7 @@ const board = document.getElementById("board");
 const cells = board.getElementsByTagName("td");
 const message = document.getElementById("message");
 const toggleModeButton = document.getElementById("toggle-mode");
+const resetButton = document.getElementById("reset");
 let currentPlayer = "X";
 let gameOver = false;
 
@@ -16,10 +17,13 @@ const winningCombinations = [
   [2, 4, 6],
 ];
 
+resetButton.addEventListener("click", resetGame);
+
 toggleModeButton.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
   board.classList.toggle("dark-mode");
   toggleModeButton.classList.toggle("dark-mode");
+  resetButton.classList.toggle("dark-mode");
 });
 
 board.addEventListener("click", (event) => {
@@ -51,3 +55,13 @@ board.addEventListener("click", (event) => {
     currentPlayer = currentPlayer === "X" ? "O" : "X";
   }
 });
+
+function resetGame() {
+  for (const cell of cells) {
+    cell.textContent = "";
+  }
+
+  message.textContent = "";
+  currentPlayer = "X";
+  gameOver = false;
+}

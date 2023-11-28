@@ -13,10 +13,18 @@ body {
 }
 
 #toggle-mode {
-  position: absolute;
-  top: 4%;
-  left: 5%;
-  transform: translate(-50%, -50%);
+  position: flex;
+  transform: translate(5%, 15%);
+  border-radius: 15px;
+  padding: 7px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  border: none;
+  cursor: pointer;
+}
+
+#reset {
+  display: block;
+  margin: auto;
   border-radius: 15px;
   padding: 7px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
@@ -28,7 +36,6 @@ body {
   background-color: rgb(40, 40, 40);
   color: white;
   text-shadow: 1.5px 1.5px black;
-  border: 1px solid black;
 }
 
 .dark-mode .cell{
@@ -40,6 +47,7 @@ body {
 }
 
 table {
+  margin: auto;
   border-collapse: collapse;
   background-color: white;
   border-radius: 15px;
